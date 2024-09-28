@@ -1,0 +1,16 @@
+<template>
+    <div>
+        <h1>Welcome to the PS Rental System!</h1>
+        <if (user) >
+            <p>Hello, ${user.username}!</p>
+        <else>
+            <a href="/login">Login</a>
+        </if>
+    </div>
+</template>
+
+<on-input>
+    <if (session.user) {
+        user = session.user;
+    }>
+</on-input>
